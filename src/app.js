@@ -58,7 +58,7 @@ function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMet
 //It only shows in fahrenheit. Convert the data to celsius and return it.
 function convertToCelsius(fahrenheit){
     if(typeof(fahrenheit)=="object"||typeof(fahrenheit)=="undefined"||typeof(fahrenheit)=="string"){
-        return "technical error !";
+        return "echnical error !";
         
     }
     else{
