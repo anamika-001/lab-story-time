@@ -14,22 +14,22 @@ function moreAboutHome(address, distanceFromTown, hasNeighbours) {
 //Check if the data given is of the right type
 //parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
 function moreAboutKaren(parents, noOfSiblings, isNuclearFamily) {
-
-  if(typeof(parents)=="string"&&typeof(noOfSiblings)=="number"&&typeof(isNuclearFamily)=="boolean")
-     return true;
-  else
-    return false;
+  if (
+    typeof parents == "string" &&
+    typeof noOfSiblings == "number" &&
+    typeof isNuclearFamily == "boolean"
+  )
+    return true;
+  else return false;
 }
-    //thanku sir
+//thanku sir
 //Progression 3:
 //Lily is suspicious about Karen's new friend
 //Karen tells her friend's age and even writes it down
 //Check which one those is not a number (NaN) and return that value
-function doesFriendExist(ageInText, ageInNumber){
-    if(isNaN(ageInText))
-      return ageInText;
-    else if(isNaN(ageInNumber))
-      return ageInNumber;
+function doesFriendExist(ageInText, ageInNumber) {
+  if (isNaN(ageInText)) return ageInText;
+  else if (isNaN(ageInNumber)) return ageInNumber;
 }
 //Progression 4:
 //Lily gave Karen x sweets
@@ -37,34 +37,38 @@ function doesFriendExist(ageInText, ageInNumber){
 //On her way to the river, she ate another z sweets every n meters travelled
 //Her friend divided the remaining sweets into 2 parts for each
 //How many sweets did her friend get to eat?
-function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel){  
-    totalNoOfSweets =totalNoOfSweets-sweetsConsumedByKaren;    
-    var c=metersToTravel*sweetsConsumedInNMeters;    
-    if(c<=totalNoOfSweets)   
-     {    totalNoOfSweets -=c;   
-         return totalNoOfSweets/2;    }    
-     else  {
-     return "No sweets for Karen's friend";}
-     
-     } 
-      //let x=
-     // console.log(x);
-           
-     
+function sweetTooth(
+  totalNoOfSweets,
+  sweetsConsumedByKaren,
+  sweetsConsumedInNMeters,
+  metersToTravel
+) {
+  totalNoOfSweets = totalNoOfSweets - sweetsConsumedByKaren;
+  var c = metersToTravel * sweetsConsumedInNMeters;
+  if (c <= totalNoOfSweets) {
+    totalNoOfSweets -= c;
+    return totalNoOfSweets / 2;
+  } else {
+    return "No sweets for Karen's friend";
+  }
+}
+//let x=
+// console.log(x);
 
- 
 //Progression 5:
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
 //It only shows in fahrenheit. Convert the data to celsius and return it.
-function convertToCelsius(fahrenheit){
-    if(typeof(fahrenheit)=="object"||typeof(fahrenheit)=="undefined"||typeof(fahrenheit)=="string"){
-        return "echnical error !";
-        
-    }
-    else{
-   var celsius=(fahrenheit-32) * 5/9;
-   return celsius;
-    }
+function convertToCelsius(fahrenheit) {
+  if (typeof fahrenheit == "object") {
+    return "Technical Error !";
+  } else if (typeof fahrenheit == "undefined") {
+    return "Technical Error !";
+  } else if (typeof fahrenheit == "string") {
+    return "Technical Error !";
+  } else {
+    var celsius = ((fahrenheit - 32) * 5) / 9;
+    return celsius;
+  }
 }
 //Progression 6:
 //Lily can now do multiple things to deal with this
@@ -73,16 +77,11 @@ function convertToCelsius(fahrenheit){
 //3. Counsel her daughter herself
 //4. Lock her daughter in her room
 //Given a value, return which of these above actions Lily would take
-function aDifficultChoice(choice){
-      if(typeof(choice)=="string")
-          return "refuse to do anything for karen's";
-    else if(typeof(choice)=="number")
-        return "take her daughter to a doctor";
-    else if(typeof(choice)=="undefined")
-         return "wasn't able to decide";
-    else 
-        return "Breakdown and give all hopes";
-
+function aDifficultChoice(choice) {
+  if (typeof choice == "string") return "refuse to do anything for karen's";
+  else if (typeof choice == "number") return "take her daughter to a doctor";
+  else if (typeof choice == "undefined") return "wasn't able to decide";
+  else return "Breakdown and give all hopes";
 }
 //Progression 7:
 //Lily realized that she'd hurt her daughter
@@ -92,7 +91,4 @@ function aDifficultChoice(choice){
 //Take all of Lily's strategies and concatenate them to a single var
 //Seperate the strategies by a single space
 //Return the length of the complete strategy
-function consoleKaren(strategies){
-
-
-}
+function consoleKaren(strategies) {}
