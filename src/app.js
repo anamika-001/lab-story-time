@@ -59,12 +59,13 @@ function sweetTooth(
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
 //It only shows in fahrenheit. Convert the data to celsius and return it.
 function convertToCelsius(fahrenheit) {
-  if (typeof fahrenheit == "object") {
-    return "Technical Error !";
-  } else if (typeof fahrenheit == "undefined") {
-    return "Technical Error !";
-  } else if (typeof fahrenheit == "string") {
-    return "Technical Error !";
+  let a = typeof fahrenheit;
+  if (a == "object") {
+    return "Technical Error!";
+  } else if (a == "undefined") {
+    return "Technical Error!";
+  } else if (a == "string") {
+    return "Technical Error!";
   } else {
     var celsius = ((fahrenheit - 32) * 5) / 9;
     return celsius;
@@ -78,17 +79,8 @@ function convertToCelsius(fahrenheit) {
 //4. Lock her daughter in her room
 //Given a value, return which of these above actions Lily would take
 function aDifficultChoice(choice) {
-  if (typeof choice == "string") return "refuse to do anything for karen's";
-  else if (typeof choice == "number") return "take her daughter to a doctor";
-  else if (typeof choice == "undefined") return "wasn't able to decide";
-  else return "Breakdown and give all hopes";
+  if (typeof choice == "string") return "Refused to do anything for Karen";
+  else if (typeof choice == "undefined") return "Wasn't able to decide";
+  else if (typeof choice == "number") return "Take her daughter to a doctor";
+  else return "Break down and give up all hope";
 }
-//Progression 7:
-//Lily realized that she'd hurt her daughter
-//All she wants now is for her to stop crying
-//She refuses to talk to her but Lily doesn't stop trying
-//She tries out multiple things hoping for the best
-//Take all of Lily's strategies and concatenate them to a single var
-//Seperate the strategies by a single space
-//Return the length of the complete strategy
-function consoleKaren(strategies) {}
